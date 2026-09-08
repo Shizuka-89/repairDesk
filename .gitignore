@@ -1,0 +1,55 @@
+# ================================================================
+#  RepairDesk – .gitignore
+# ================================================================
+
+# --- Lokale Konfiguration -------------------------------------
+# Wird vom Installer erzeugt und enthält DB-Zugangsdaten,
+# SMTP-Passwörter und den Session-Namen. NIEMALS committen.
+config.php
+
+# --- Backups (Dateien + Datenbank-Dumps) ----------------------
+backups/
+*.sql
+*.sql.gz
+
+# --- OAuth / Tokens / Secrets ---------------------------------
+*.token
+*.pem
+*.key
+.env
+
+# --- Logs -----------------------------------------------------
+*.log
+error_log
+php_errors.log
+
+# --- Laufzeit-Daten -------------------------------------------
+# Nur relevant, wenn dein Setup solche Ordner anlegt.
+# Zeilen entfernen, falls nicht vorhanden.
+uploads/
+attachments/
+cache/
+tmp/
+
+# --- Composer (falls je hinzukommt) ---------------------------
+/vendor/
+
+# --- Release-Pakete -------------------------------------------
+# ZIPs gehören zu den GitHub Releases, nicht in den Verzeichnisbaum.
+*.zip
+*.tar.gz
+
+# --- Editoren / IDEs ------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+.history/
+
+# --- Betriebssystem -------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
